@@ -12,7 +12,7 @@ const audiences = [
   description:
   'You\'ve done the fancy restaurant. You\'ve done the luxury resort. This is the celebration you\'ll still be talking about in 2045. Twelve guests, a luxury yacht, and a coastline that doesn\'t care about your schedule.',
   detail: 'Champagne at sunset in a hidden cove. Private crew. Customized itinerary.',
-  image: "https://images.unsplash.com/photo-1520187357144-1d60d57b2e1a?w=800&h=600&fit=crop&crop=entropy",
+  image: "/images/crete-coastal.png",
   imageAlt: 'Couple celebrating with champagne on luxury yacht deck, Mediterranean sunset, crystal clear waters',
   tag: 'Private charters available',
   tagIcon: 'HeartIcon' as const,

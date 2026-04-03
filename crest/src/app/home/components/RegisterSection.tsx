@@ -102,7 +102,7 @@ export default function RegisterSection() {
         </div>
 
         {/* Tab switcher */}
-        <div className="flex bg-white/8 border border-white/12 rounded-2xl p-1.5 mb-10 max-w-sm mx-auto">
+        <div className="flex bg-white/8 border border-white/12 rounded-2xl p-1.5 mb-10 max-w-sm mx-auto" suppressHydrationWarning>
           {(['reserve', 'gift'] as TabMode[]).map((t) => (
             <button
               key={t}
@@ -112,6 +112,7 @@ export default function RegisterSection() {
                   ? 'bg-[#E8B630] text-[#0F1C2E]'
                   : 'text-white/60 hover:text-white/85'
               }`}
+              suppressHydrationWarning
             >
               {t === 'reserve' ? 'Reserve a seat' : 'Gift this trip'}
             </button>
@@ -149,6 +150,7 @@ export default function RegisterSection() {
                             ? 'border-[#E8B630] bg-[#E8B630]/12 text-white'
                             : 'border-white/12 bg-white/5 text-white/65 hover:border-white/25 hover:text-white/85'
                         }`}
+                        suppressHydrationWarning
                       >
                         {exp}
                       </button>
@@ -197,6 +199,7 @@ export default function RegisterSection() {
                           ${cell.status === 'unavailable' ? 'cal-unavailable bg-white/4 text-white/20 rounded-lg' : ''}
                           ${selectedDay === cell.day ? 'cal-selected' : ''}
                         `}
+                        suppressHydrationWarning
                       >
                         {cell.day}
                       </button>
@@ -219,6 +222,7 @@ export default function RegisterSection() {
                       type="button"
                       onClick={() => setGroupSize(Math.max(1, groupSize - 1))}
                       className="w-10 h-10 rounded-full border border-white/15 bg-white/8 text-white hover:bg-white/15 transition-colors flex items-center justify-center"
+                      suppressHydrationWarning
                     >
                       <Icon name="MinusIcon" size={16} variant="outline" />
                     </button>
@@ -227,6 +231,7 @@ export default function RegisterSection() {
                       type="button"
                       onClick={() => setGroupSize(Math.min(6, groupSize + 1))}
                       className="w-10 h-10 rounded-full border border-white/15 bg-white/8 text-white hover:bg-white/15 transition-colors flex items-center justify-center"
+                      suppressHydrationWarning
                     >
                       <Icon name="PlusIcon" size={16} variant="outline" />
                     </button>
@@ -252,6 +257,7 @@ export default function RegisterSection() {
                             ? 'border-[#E8B630] bg-[#E8B630]/10'
                             : 'border-white/12 bg-white/5 hover:border-white/22'
                         }`}
+                        suppressHydrationWarning
                       >
                         <div>
                           <p className={`font-medium text-sm ${experience === lvl.id ? 'text-white' : 'text-white/75'}`}>
@@ -283,6 +289,7 @@ export default function RegisterSection() {
                     placeholder="Medical conditions, mobility, celebrating something, travelling solo from somewhere interesting…"
                     rows={3}
                     className="form-input w-full px-5 py-4 rounded-xl text-sm resize-none"
+                    suppressHydrationWarning
                   />
                 </div>
 
@@ -293,12 +300,14 @@ export default function RegisterSection() {
                     placeholder="Your name"
                     required
                     className="form-input px-5 py-4 rounded-xl text-sm"
+                    suppressHydrationWarning
                   />
                   <input
                     type="email"
                     placeholder="Email address"
                     required
                     className="form-input px-5 py-4 rounded-xl text-sm"
+                    suppressHydrationWarning
                   />
                 </div>
 
@@ -306,6 +315,7 @@ export default function RegisterSection() {
                 <button
                   type="submit"
                   className="w-full flex items-center justify-center gap-3 bg-[#E8B630] text-[#0F1C2E] font-bold text-[15px] uppercase tracking-wide px-8 py-5 rounded-full hover:bg-[#D4A420] transition-all duration-200 cta-primary shadow-yellow-glow"
+                  suppressHydrationWarning
                 >
                   Reserve Your Seat on the Boat
                   <Icon name="ArrowRightIcon" size={18} variant="outline" />
@@ -336,13 +346,13 @@ export default function RegisterSection() {
                     <label className="block text-[11px] font-mono uppercase tracking-widest text-white/60 mb-2">
                       Your name
                     </label>
-                    <input type="text" required placeholder="From" className="form-input w-full px-5 py-4 rounded-xl text-sm" />
+                    <input type="text" required placeholder="From" className="form-input w-full px-5 py-4 rounded-xl text-sm" suppressHydrationWarning />
                   </div>
                   <div>
                     <label className="block text-[11px] font-mono uppercase tracking-widest text-white/60 mb-2">
                       Your email
                     </label>
-                    <input type="email" required placeholder="your@email.com" className="form-input w-full px-5 py-4 rounded-xl text-sm" />
+                    <input type="email" required placeholder="your@email.com" className="form-input w-full px-5 py-4 rounded-xl text-sm" suppressHydrationWarning />
                   </div>
                 </div>
 
@@ -356,6 +366,7 @@ export default function RegisterSection() {
                     onChange={(e) => setGiftName(e.target.value)}
                     placeholder="Who is this for?"
                     className="form-input w-full px-5 py-4 rounded-xl text-sm"
+                    suppressHydrationWarning
                   />
                 </div>
 
@@ -369,6 +380,7 @@ export default function RegisterSection() {
                     onChange={(e) => setGiftEmail(e.target.value)}
                     placeholder="Their email for the certificate"
                     className="form-input w-full px-5 py-4 rounded-xl text-sm"
+                    suppressHydrationWarning
                   />
                 </div>
 
@@ -387,6 +399,7 @@ export default function RegisterSection() {
                             ? 'border-[#E8B630] bg-[#E8B630]/12 text-white'
                             : 'border-white/12 bg-white/5 text-white/65 hover:border-white/25'
                         }`}
+                        suppressHydrationWarning
                       >
                         {exp}
                       </button>
@@ -402,12 +415,14 @@ export default function RegisterSection() {
                     rows={3}
                     placeholder="A note to include on the certificate…"
                     className="form-input w-full px-5 py-4 rounded-xl text-sm resize-none"
+                    suppressHydrationWarning
                   />
                 </div>
 
                 <button
                   type="submit"
                   className="w-full flex items-center justify-center gap-3 bg-[#E8B630] text-[#0F1C2E] font-bold text-[15px] uppercase tracking-wide px-8 py-5 rounded-full hover:bg-[#D4A420] transition-all duration-200 cta-primary shadow-yellow-glow"
+                  suppressHydrationWarning
                 >
                   Gift This Trip
                   <Icon name="GiftIcon" size={18} variant="outline" />
