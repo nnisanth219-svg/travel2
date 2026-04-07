@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="flex items-center gap-4">
             <AppLogo text="AQUA" iconName="AnchorIcon" size={28} className="text-white/70" />
             <span className="text-[13px] text-white/40 font-medium">
-              © 2026 Crest Expeditions Ltd. Scotland.
+              © 2026 aqua Expeditions Ltd. Scotland.
             </span>
           </div>
 

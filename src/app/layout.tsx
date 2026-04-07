@@ -8,7 +8,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'Crest — Wild Atlantic Expeditions, Scotland',
+  title: 'aqua — Wild Atlantic Expeditions, Scotland',
   description: 'Small-group RIB expeditions into sea caves, past grey seal colonies and through tidal races on Scotland\'s Atlantic coastline. Reserve your seat.',
   icons: {
     icon: [
